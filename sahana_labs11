@@ -1,0 +1,41 @@
+1. Write an awk command to delete all the blank lines from a files.
+
+
+~$ cat sample.txt
+Hi there
+let me delete this blank space for you
+
+
+
+
+
+
+done
+
+cs2016a217@user:~$ awk 'NF' sample.txt
+Hi there
+let me delete blank space for you
+done
+
+2. Print only the odd numbers of a file
+
+cs2016a217@user:~$ awk 'NR%2==1' emp.lst 
+
+
+ 3. Write an awk command to print the last field without knowing the number of fields of a file
+
+
+cs2016a217@user:~$ awk -F "|" '{print $NF}' emp.lst
+
+4. write the equivalent awk command for "head -n 5 filename"
+
+cs2016a217@user:~$ awk -F "|" 'NR==1,NR==5{print $0}' emp.lst
+
+5. write the equivalent awk command for "sed -n '5,10p' filename"
+
+cs2016a217@user:~$ awk -F "|" 'NR==5,NR==10{print $0}' emp.lst
+ 
+ 6. to print last 5 files
+ cs2016a217@user:~$ awk -F "|" 'NR==7,NR==$NF{print $0}' emp.lst
+
+
