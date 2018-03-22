@@ -1,0 +1,2 @@
+to display cgpa column without displaying the word cgpa 
+cut -d "," -f 3 CSEA2.csv|grep -v "CGPA" 
