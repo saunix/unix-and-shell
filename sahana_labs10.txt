@@ -1,0 +1,35 @@
+PROGRAM- select
+
+names='nia pia sia kia'
+PS3='Select names: '
+select name in $names
+do
+    if [ $name == kia]
+      then
+        break
+    fi
+    echo "hello $name"
+done
+
+output:
+
+1) nia
+2) pia
+3) sia
+4) kia
+Select names: 1
+hello nia
+Select names: 2
+hello pia
+Select names: 3
+hello sia
+Select names: 4
+                               
+dialog
+
+$ dialog --title "hello" --msgbox "Hi" 10 20
+$ dialog --title "Hello" --yesno "happy" 10 20
+$ dialog --title "Hello" --infobox "happy" 10 20;sleep 6
+$ dialog --title "Hello" --menu "Enter the option" 10 20 3 1 red, 2 green, 3 blue
+$ dialog --title "Hello" --checklist "tick the list" 10 20 3 1 red on, 2 green off, 3 blue on
+
