@@ -1,0 +1,171 @@
+use who [commands]  
+
+-a, --all
+              same as -b -d --login -p -r -t -T -u
+
+       -b, --boot
+              time of last system boot
+
+       -d, --dead
+              print dead processes
+
+       -H, --heading
+              print line of column headings
+
+       --ips  print  ips  instead  of  hostnames. with --lookup, canonicalizes
+              based on stored IP, if available, rather than stored hostname
+
+       -l, --login
+              print system login processes
+
+       --lookup
+              attempt to canonicalize hostnames via DNS
+
+       -m     only hostname and user associated with stdin
+
+       -p, --process
+              print active processes spawned by init
+
+       -q, --count
+              all login names and number of users logged on
+
+       -r, --runlevel
+              print current runlevel
+
+       -s, --short
+              print only name, line, and time (default)
+
+       -t, --time
+              print last system clock change
+
+       -T, -w, --mesg
+              add user's message status as +, - or ?
+
+       -u, --users
+
+
+using bc(calculator)
+ 
+
+
+ - expr The result is the negation of the expression.
+
+       ++ var The variable is incremented by one and  the  new  value  is  the
+              result of the expression.
+
+       -- var The  variable  is  decremented  by  one and the new value is the
+              result of the expression.
+
+       var ++
+               The result of the expression is the value of the  variable  and
+              then the variable is incremented by one.
+
+       var -- The  result  of  the expression is the value of the variable and
+              then the variable is decremented by one.
+
+       expr + expr
+              The result of the expression is the sum of the two expressions.
+
+       expr - expr
+              The result of the  expression  is  the  difference  of  the  two
+              expressions.
+
+       expr * expr
+              The  result  of the expression is the product of the two expres‐
+              sions.
+
+       expr / expr
+              The result of the expression is the quotient of the two  expres‐
+              sions.   The  scale  of  the result is the value of the variable
+              scale.
+ expr ^ expr
+              The result of the expression is the value of the first raised to
+              the second.  The second expression must be an integer.  (If  the
+              second  expression is not an integer, a warning is generated and
+              the expression is truncated to get an integer value.)  The scale
+              of  the  result  is  scale  if the exponent is negative.  If the
+              exponent is positive the scale of the result is the  minimum  of
+              the  scale  of the first expression times the value of the expo‐
+              nent and the maximum of scale and the scale of the first expres‐
+              sion.    (e.g.   scale(a^b)   =   min(scale(a)*b,   max(  scale,
+              scale(a))).)  It should be noted that expr^0 will always  return
+              the value of 1.
+
+       ( expr )
+              This  alters  the standard precedence to force the evaluation of
+              the expression.
+
+       var = expr
+              The variable is assigned the value of the expression.
+
+       var <op>= expr
+              This is equivalent to "var = var <op> expr" with  the  exception
+              that  the  "var"  part  is evaluated only once.  This can make a
+              difference if "var" is an array.
+
+       Relational expressions are a special kind  of  expression  that  always
+       evaluate to 0 or 1, 0 if the relation is false and 1 if the relation is
+       true.  These may appear in any legal expression.   (POSIX  bc  requires
+       that  relational expressions are used only in if, while, and for state‐
+       ments and that only one relational test may  be  done  in  them.)   The
+       relational operators are
+
+       expr1 < expr2
+              The result is 1 if expr1 is strictly less than expr2.
+
+       expr1 <= expr2
+              The result is 1 if expr1 is less than or equal to expr2.
+ expr1 < expr2
+              The result is 1 if expr1 is strictly less than expr2.
+
+       expr1 <= expr2
+              The result is 1 if expr1 is less than or equal to expr2.
+
+       expr1 > expr2
+              The result is 1 if expr1 is strictly greater than expr2.
+
+       expr1 >= expr2
+              The result is 1 if expr1 is greater than or equal to expr2.
+
+       expr1 == expr2
+              The result is 1 if expr1 is equal to expr2.
+
+       expr1 != expr2
+              The result is 1 if expr1 is not equal to expr2.
+
+       Boolean  operations  are  also  legal.  (POSIX bc does NOT have boolean
+       operations).  The result of all boolean operations are  0  and  1  (for
+       false  and  true)  as in relational expressions.  The boolean operators
+       are:
+
+       !expr  The result is 1 if expr is 0.
+
+       expr && expr
+              The result is 1 if both expressions are non-zero.
+
+       expr || expr
+              The result is 1 if either expression is non-zero.
+
+       The expression precedence is as follows: (lowest to highest)
+              || operator, left associative
+              && operator, left associative
+              ! operator, nonassociative
+              Relational operators, left associative
+
+       s (x)  The sine of x, x is in radians.
+
+       c (x)  The cosine of x, x is in radians.
+
+       a (x)  The arctangent of x, arctangent returns radians.
+
+       l (x)  The natural logarithm of x.
+
+       e (x)  The exponential function of raising e to the value x.
+
+       j (n,x)
+              The Bessel function of integer order n of x.
+
+
+
+
+

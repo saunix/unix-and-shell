@@ -1,0 +1,43 @@
+UNIX COMMANDS:
+
+1. mkdir: to create a directory
+2. cd: to change the directory
+3. ls: to display files
+4. vim filename: to create a document
+5. :wq: to save and quit
+6. :q!: quit but not save
+7. esc+x: delete a character 
+8. esc+u: undo
+9. esc+r: redo
+10. esc+A: append
+11. dw: move cursor to beginning of the word and delete that word
+12. 2w: move cursor 2 words forward
+13. 0: move cursor to the start of the line 
+14. 3e: move cursor to the end of three word forward
+15. dd: to delete the line and 2dd to delete 
+16. p: puts previously deleted text after the cursor
+17. r: to replace the character
+18. ce: to delete the word and places you in insert mode
+19. gg: to move you to the start of the file
+20. % : to find matching
+21. G: to move to the bottom of the line
+22. :s/old/new/g: to substitute "new" for "old" where g is global
+23. :| to run the shell commands like :|dir, :||s
+24: d2w: to delete 2 words
+25. :r : filename will insert the content into the current file
+26. R: to replace more than one character
+27. y- operator to copy text using v virtual mode and p to paste it
+28. o: opens a line below cursor
+29. O: opens a line above cursor
+30. a: inserts a text after cursor
+31. A: inserts text after the end of the line 
+32 e: command moves to end of the word
+33 y: operator yanks(copies) text p, puts(pastes) it 
+34. R: replace  mode until esc is pressed
+35. ctrl+w: to jump from one window to another
+36. ? forward search
+37. \backward search to find next occurence and N to search in opposite direction
+
+
+
+
